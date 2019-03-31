@@ -15,7 +15,7 @@ public class GridDemo {
         //实例化一个DesiredCapabilities对象dc
         DesiredCapabilities dc=DesiredCapabilities.chrome();
         //实例化一个driver
-        WebDriver driver = new RemoteWebDriver(new URL("http://22.28.152.55:4444/wd/hub"),dc);
+        WebDriver driver = new RemoteWebDriver(new URL("http://192.168.21.1:4444/wd/hub"),dc);
         //打开百度首页
         driver.get("http://www.baidu.com");
         Thread.sleep(5000);
@@ -24,9 +24,9 @@ public class GridDemo {
     @DataProvider(name="hehe")
     public Object[][] browser(){
         return new Object[][]{
-                {"firefox","http://22.28.152.55:6666"},
-                {"chrome","http://22.28.152.55:6666"},
-                {"ie","http://22.28.152.55:6666"}
+                {"firefox","http://192.168.21.1:5555"},
+                {"chrome","http://192.168.21.1:6666"},
+                {"ie","http://192.168.21.1:5555"}
         };
     }
     @Test(dataProvider = "hehe")
