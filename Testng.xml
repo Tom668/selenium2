@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite" parallel="methods" thread-count="2">
+    <test name="Grid_Test1">
+        <classes>
+            <class name="cn.itcast.GridDemo">
+                <methods>
+                     <include name="test1"/>
+                    <!-- <exclude name="test1"/>-->
+                  </methods>
+              </class>
+              <class name="cn.itcast.GridDemo">
+                  <methods>
+                      <include name="test"/>
+                      <!--  <exclude name="test1"/>-->
+                 </methods>
+             </class>
+         </classes>
+     </test>
+ </suite>
